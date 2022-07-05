@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Mega Menu | CodingNepal</title>
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -19,69 +20,84 @@
             <input type="radio" name="slider" id="menu-btn">
             <input type="radio" name="slider" id="close-btn">
             <ul class="nav-links">
-            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li>
-                <a href="#" class="desktop-item">Footerwear</a>
-                <input type="checkbox" id="showDrop">
-                <label for="showDrop" class="mobile-item">Footerwear</label>
-                <ul class="drop-menu">
-                    <li><a href="#">Newest skneaker</a></li>
-                    <li><a href="#">Life style</a></li>
-                    <li>
-                        <a href="#">Running</a>
-                        <ul class="submenu">
-                            <li><a> 1 </a></li>
-                            <li><a> 2 </a></li>
-                            <li><a> 3 </a></li>
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Sale</a></li>
+                <li>
+                    <a href="#" class="desktop-item">Footerwear</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Footerwear</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">Newest skneaker</a></li>
+                        <li><a href="#">Life style</a></li>
+                        <li>
+                            <a class="desktop-item" href="#">Running</a>
+                            <input type="checkbox" id="showSubDrop">
+                            <label for="showSubDrop" class="sub-mobile-item mobile-item">Running</label>
+                            <ul class="submenu submenu-mobile">
+                                <li><a href="#">Boost</a></li>
+                                <li><a href="#">Zoom</a></li>
+                                <li><a href="#">4D</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Basketball</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="desktop-item">Services</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Services</label>
+                    <div class="mega-box">
+                    <div class="content">
+                        <div class="row">
+                        <img src="./assets/img/favio.png" alt="">
+                        </div>
+                        <div class="row">
+                        <header>Order Services</header>
+                        <ul class="mega-links">
+                            <li><a href="#">Clothes</a></li>
+                            <li>
+                                <a href="#" onclick="openNav()">Watch</a>
+                            </li>
+                            <li><a href="#">Accessories</a></li>
                         </ul>
-                    </li>
-                    <li><a href="#">Basketball</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="desktop-item">Services</a>
-                <input type="checkbox" id="showMega">
-                <label for="showMega" class="mobile-item">Services</label>
-                <div class="mega-box">
-                <div class="content">
-                    <div class="row">
-                    <img src="./assets/img/favio.png" alt="">
+                        </div>
+                        <div class="row">
+                        <header>Used</header>
+                        <ul class="mega-links">
+                            <li><a href="#">Sneaker</a></li>
+                            <li><a href="#">Clothes</a></li>
+                            <li><a href="#">Watch</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                        </div>
+                        <div class="row">
+                        <header>Other services</header>
+                        <ul class="mega-links">
+                            <li><a href="#">Cleanning</a></li>
+                            <li><a href="#">Sole</a></li>
+                            <li><a href="#">Repair</a></li>
+                            <li><a href="#">Custom</a></li>
+                        </ul>
+                        </div>
                     </div>
-                    <div class="row">
-                    <header>Design Services</header>
-                    <ul class="mega-links">
-                        <li><a href="#">Graphics</a></li>
-                        <li><a href="#">Vectors</a></li>
-                        <li><a href="#">Business cards</a></li>
-                        <li><a href="#">Custom logo</a></li>
-                    </ul>
                     </div>
-                    <div class="row">
-                    <header>Email Services</header>
-                    <ul class="mega-links">
-                        <li><a href="#">Personal Email</a></li>
-                        <li><a href="#">Business Email</a></li>
-                        <li><a href="#">Mobile Email</a></li>
-                        <li><a href="#">Web Marketing</a></li>
-                    </ul>
-                    </div>
-                    <div class="row">
-                    <header>Security services</header>
-                    <ul class="mega-links">
-                        <li><a href="#">Site Seal</a></li>
-                        <li><a href="#">VPS Hosting</a></li>
-                        <li><a href="#">Privacy Seal</a></li>
-                        <li><a href="#">Website design</a></li>
-                    </ul>
-                    </div>
-                </div>
-                </div>
-            </li>
-            <li><a href="#">Feedback</a></li>
+                </li>
+                <li><a href="#">Feedback</a></li>
+
+                
             </ul>
             <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            <!-- overlay menu -->
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -111,72 +127,98 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        
         <div class="container-fluid">
             <h1 class="heading-content">FOOTWEAR</h1>
+            <div class="row wrap-product">
+                
+            </div>
+        </div>  
+        
+        <div class="btn">
+            <button class="see-more">SEE MORE</button>
+        </div>
+
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">
-                    <a href="#">
-                        <img src="./assets/img/shoes1.jpg" alt="">
-                        <div class="product-info">
-                            <h2 class="product-name">NIKE AIR FORCE 1 LOW WHITE GUM</h2>
-                            <h3 class="product-price">đ 3,600,000</h3>
+                <div class="col-sm-4 col-xs-12 thumb">
+                   <div class="final-wrap">
+                        <img src="./assets/img/final1.png" alt="">
+                        <div class="btn btn-block">
+                            <button class="see-more final-btn">STREETWEAR</button>
                         </div>
-                    </a>
+                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">
-                    <a href="#">
-                        <img src="./assets/img/shoes2.jpg" alt="">
-                        <div class="product-info">
-                            <h2 class="product-name">Air Jordan 1 Low Inside Out Cream White Light Grey</h2>
-                            <h3 class="product-price">đ 4,800,000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">
-                    <a href="#">
-                        <img src="./assets/img/shoes3.jpg" alt="">
-                        <div class="product-info">
-                            <h2 class="product-name">Air Jordan 1 Mid SE Craft Inside Out White Grey</h2>
-                            <h3 class="product-price">đ 4,900,000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">
-                    <a href="#">
-                        <img src="./assets/img/shoes4.jpg" alt="">
-                        <div class="product-info">
-                            <h2 class="product-name">Nike Blazer Mid '77 Vintage White Black</h2>
-                            <h3 class="product-price">đ 2,600,000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">
-                    <a href="#">
-                        <img src="./assets/img/shoes5.jpg" alt="">
-                        <div class="product-info">
-                            <h2 class="product-name">Nike Blazer Low White Black</h2>
-                            <h3 class="product-price">đ 2,100,000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">
-                    <a href="#">
-                        <img src="./assets/img/shoes6.jpg" alt="">
-                        <div class="product-info">
-                            <h2 class="product-name">Sky  Air Jordan 1 Shattered Backboard (TD)</h2>
-                            <h3 class="product-price">đ 1,500,000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">thumbnail</div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">thumbnail</div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">thumbnail</div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">thumbnail</div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">thumbnail</div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 thumb">thumbnail</div>
+                <div class="col-sm-4 col-xs-12 thumb">
+                    <div class="final-wrap">
+                         <img src="./assets/img/final2.png" alt="">
+                         <div class="btn btn-block">
+                             <button class="see-more final-btn">SNKEAR</button>
+                         </div>
+                    </div>
+                 </div>
+                 <div class="col-sm-4 col-xs-12 thumb">
+                    <div class="final-wrap">
+                         <img src="./assets/img/final3.png" alt="">
+                         <div class="btn btn-block">
+                             <button class="see-more final-btn">ACCESSORIES</button>
+                         </div>
+                    </div>
+                 </div>
             </div>
         </div>
-    </div>
 
+        <!-- footer -->
+        <footer class="w-100 py-4 flex-shrink-0">
+            <div class="container py-4 footer-wrap">
+                <div class="row gy-4 gx-5">
+                    <div class="col-lg-4 col-md-6">
+                        <h1 class="h1 text-white">FB.</h1>
+                        <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                        <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white mb-3">Quick links</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Get started</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white mb-3">Quick links</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Get started</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="text-white mb-3">Newsletter</h5>
+                        <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script src="./assets/js/render.js"></script>
 </body>
 </html>
