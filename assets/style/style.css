@@ -90,6 +90,7 @@ a{
   font-weight: 400;
   border-radius: 0px;
 }
+
 .mega-box{
   position: absolute;
   left: 0;
@@ -237,14 +238,14 @@ nav input{
   display: none;
 }
 
-.btn{
+.btn-big{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.btn .see-more{
+.btn-big .see-more{
   display: inline-block;
   font-size: 15px;
   padding: 10px 30px 10px;
@@ -282,4 +283,8 @@ footer {
 
 .footer-wrap{
   padding: 50px 0;
+}
+
+.desktop-item i{
+  margin-left: 5px;
 }
