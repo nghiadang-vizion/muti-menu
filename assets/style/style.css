@@ -288,3 +288,19 @@ footer {
 .desktop-item i{
   margin-left: 5px;
 }
+
+.item-control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.item-control i{
+  color: white;
+  margin-right: 10px;
+}
+
+.item-control:hover{
+  background: #3A3B3C;
+}
