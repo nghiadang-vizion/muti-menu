@@ -321,3 +321,8 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.fade-black{
+  width: 0;
+  height: 0;
+}
