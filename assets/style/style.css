@@ -13,6 +13,10 @@ nav{
   background: #242526;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 nav .wrapper{
   position: relative;
   max-width: 1300px;
