@@ -30,9 +30,9 @@
     .nav-links.active{
       left: 0%;
     }
-    #menu-btn:checked ~ .btn.menu-btn{
+    /* #menu-btn:checked ~ .btn.menu-btn{
       display: none;
-    }
+    } */
     #close-btn:checked ~ .btn.menu-btn{
       display: block;
     }
@@ -61,7 +61,8 @@
     #showSubDrop:checked ~ .submenu-mobile,
     #showDrop:checked ~ .drop-menu,
     #showMega:checked ~ .mega-box{
-      max-height: 100%;
+      max-height: 100% !important;
+      display: block;
     }
     .nav-links .desktop-item{
       display: none;
@@ -179,5 +180,19 @@
     }
     .down-icon{
       display: none !important;
+    }
+
+    .fade-black{
+      width: 10%;
+      height: 200vh;
+      background: transparent;
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .fade-black.active{
+      opacity: 1;
     }
 }

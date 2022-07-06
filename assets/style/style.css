@@ -226,7 +226,7 @@ nav input{
     background-color: #242526;
     left: 100%;
     bottom: -23%;
-    display: none;
+    opacity: 0;
 }
 
 .submenu li a{
@@ -234,7 +234,9 @@ nav input{
 }
 
 .drop-menu li:nth-child(3):hover .submenu{
-  display: block;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
 }
 
 

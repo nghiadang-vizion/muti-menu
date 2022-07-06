@@ -88,9 +88,8 @@
                     </div>
                 </li>
                 <li><a href="#">Feedback</a></li>
-
-                
             </ul>
+            <ul id="fade-black" class="fade-black"></ul>
             <label for="menu-btn" class="btn menu-btn" id="menu-btn" style="text-align: right;"><i class="fas fa-bars"></i></label>
             <!-- overlay menu -->
             <div id="myNav" class="overlay">
@@ -219,16 +218,24 @@
         const nav = document.querySelector('.nav-links');
         const openBtn = document.querySelector('.menu-btn')
         const closeBtn = document.querySelector('.close-btn');
+        const fade = document.getElementById('fade-black')
+
+        document.onclick = function (e) {
+            if (e.target.id === 'fade-black') {
+                nav.classList.remove('active');
+                fade.classList.remove('active')
+            }
+        }
 
         closeBtn.onclick = function () {
             nav.classList.remove('active');
+            fade.classList.remove('active')
         }
 
         openBtn.onclick = function () {
             nav.classList.toggle('active');
+            fade.classList.toggle('active')
         }
-
-
 
         function openNav() {
           document.getElementById("myNav").style.width = "100%";
